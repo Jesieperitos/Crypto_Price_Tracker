@@ -1,5 +1,3 @@
-// lib/services/ai_service.dart
-
 import 'package:google_generative_ai/google_generative_ai.dart';
 import '../models/crypto_coin.dart';
 
