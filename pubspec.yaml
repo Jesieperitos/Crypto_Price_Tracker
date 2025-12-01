@@ -1,4 +1,4 @@
-name: crypto_price_tracker
+name: crypto price tracker
 description: "A new Flutter project."
 publish_to: 'none'
 
@@ -10,10 +10,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.1.0            # Para sa API calls (CoinGecko)
-  shared_preferences: ^2.2.2  # Para sa favorites storage at theme saving
-  fl_chart: ^0.66.1       # Para sa charts
-  google_generative_ai: ^0.2.2 # Para sa AI analysis (Gemini API)
+  http: ^1.1.0
+  shared_preferences: ^2.2.2
+  fl_chart: ^0.66.1
+  google_generative_ai: ^0.2.2
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
