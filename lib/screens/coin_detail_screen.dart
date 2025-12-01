@@ -38,17 +38,36 @@ class _CoinDetailScreenState extends State<CoinDetailScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.network(widget.coin.image, width: 50, height: 50),
-                  const SizedBox(width: 10),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(widget.coin.name, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-                      Text(widget.coin.symbol.toUpperCase(), style: const TextStyle(fontSize: 16, color: Colors.grey)),
-                    ],
+                  Expanded(
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.network(widget.coin.image, width: 50, height: 50),
+                        const SizedBox(width: 10),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.45,
+                              child: Text(
+                                widget.coin.name,
+                                style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                              ),
+                            ),
+                            Text(
+                              widget.coin.symbol.toUpperCase(),
+                              style: const TextStyle(fontSize: 16, color: Colors.grey),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                  const Spacer(),
+
                   Text(
                     '\$${widget.coin.currentPrice.toStringAsFixed(2)}',
                     style: TextStyle(
@@ -59,6 +78,7 @@ class _CoinDetailScreenState extends State<CoinDetailScreen> {
                   ),
                 ],
               ),
+
               const SizedBox(height: 10),
 
               const Divider(),
