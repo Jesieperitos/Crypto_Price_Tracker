@@ -1,4 +1,4 @@
-name: crypto price tracker
+name: crypto_price_tracker
 description: "A new Flutter project."
 publish_to: 'none'
 
@@ -17,9 +17,15 @@ dependencies:
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.10.0
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/price.png"
 
 flutter:
   uses-material-design: true
